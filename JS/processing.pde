@@ -1,28 +1,37 @@
-//Run at intital load 
 {
-	size(500, 500);
+    size(500,500);
 }
 
-var add = function(num1, num2) {
-    return num1 + num2;
-};
-var subtract = function(num1, num2) {
-    return num1 - num2;
-};
-var multiply = function(num1, num2) {
-    return num1 * num2;
-};
-var divide = function(num1, num2) {
-    return num1 / num2;
+draw = function() {
+
+    
+background(89, 216, 255);
+
+var Rainbow = function(x, y, radius){
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
 };
 
-fill(255, 0, 0);
-text("15 + 3 is " + add(15, 3), 10, 20);
-text("15 - 3 is " + subtract(15, 3), 10, 50);
-text("15 * 3 is " + multiply(15, 3), 10, 80);
-text("15 / 3 is " + divide(15, 3), 10, 110);
+var first_Rainbow = new Rainbow(180, 150, 200);
+var second_Rainbow = new Rainbow(180, 250, 200);
 
-text("8 + 4 is " + add(8, 4), 10, 170);
-text("8 - 4 is " + subtract(8, 4), 10, 200);
-text("8 * 4 is " + multiply(8, 4), 10, 230);
-text("8 / 4 is " + divide(8, 4), 10, 260);
+var drawRainbow = function(rainbow) {
+    noFill();
+    strokeWeight(5);
+    stroke(255, 0, 0);
+    arc(rainbow.x, rainbow.y, rainbow.radius, rainbow.radius, 1, 180);
+    stroke(250, 200, 0);
+    arc(rainbow.x, rainbow.y, rainbow.radius-10, rainbow.radius-10, 1, 180);
+    stroke(240, 255, 102);
+    arc(rainbow.x, rainbow.y, rainbow.radius-20, rainbow.radius-20, 1, 180);
+    stroke(29, 255, 13);
+    arc(rainbow.x, rainbow.y, rainbow.radius-30, rainbow.radius-30, 1, 180);
+    stroke(122, 155, 255);
+    arc(rainbow.x, rainbow.y, rainbow.radius-40, rainbow.radius-40, 1, 180);
+
+};
+
+drawRainbow(first_Rainbow);
+drawRainbow(second_Rainbow);
+};
