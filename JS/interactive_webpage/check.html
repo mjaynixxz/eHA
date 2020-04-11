@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Forms</title>
+</head>
+<body>
+    <div>
+        <label for="">
+            <input type="text" id="name" text="text">
+
+        </label>
+        <br>
+        <label for="">What do you speak?
+            <select name="" id="lang">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="plt">Pig-latin</option>
+            </select>
+        </label>
+        <br>
+        <button id="button" type="button">Greetings</button>
+        <div id="message"></div>
+    </div>
+
+
+    <script>
+        var button = document.getElementById("button");
+
+        var onbuttonClick = function() {
+            var name = document.getElementById("name").value;
+
+            var lang = document.getElementById("lang");
+            var greetings;
+            if (lang === "es") {
+                greetings = "Heyaz, " + name;
+            }
+            else if (lang === "plt") {
+                greetings = "Ello-hay, " + name;
+            }
+            else {
+                greetings = "Hello " + name;
+            }
+            
+
+            document.getElementById("message").textContent += greetings;
+        }
+        button.addEventListener("click", onbuttonClick);
+    </script>
+</body>
+</html>

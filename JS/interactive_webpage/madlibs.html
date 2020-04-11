@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+ </head>
+ <body>
+ 
+    <h1>Mad Libs</h1>
+     
+    <ul>
+      <li>Noun: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone's Name: <input type="text" id="person"></li>
+    </ul>
+     
+    <button id="lib-button">Lib it!</button>
+      
+    <p>Generated story: 
+    <span id="story"></span>
+    </p>
+ 
+    <script>
+        var libButton = document.getElementById('lib-button');
+
+        var libIt = function() {
+            var noun = document.getElementById("noun").value;
+            var adjective = document.getElementById("adjective").value;
+            var person = document.getElementById("person").value;
+            
+            var storyDiv = document.getElementById("story");
+            if (noun !== "" && adjective !== "" && person !== "") {
+              storyDiv.innerHTML = "I smelled something funny when I was getting ready for work one day. I followed the smell to the kitchen, where I found that my cat had turned on my gas stove and was standing over the burner huffing the fumes. Needless to say, I was forced to remove the knobs from my stove, and only put them on when I need to use it.";
+            }
+            else {
+              storyDiv.innerHTML = "Please fill in the empty spaces";
+            };
+        };
+        libButton.addEventListener('click', libIt);
+        
+    </script>
+  
+ </body>
+</html>
