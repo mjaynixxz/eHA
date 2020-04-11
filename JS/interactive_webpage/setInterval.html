@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animating with setInterval</title>
+</head>
+<body>
+    <div>
+        <img src="https://www.kasandbox.org/programming-images/creatures/OhNoes.png" alt="" id="ohnoes">
+    <h1>
+        Ohnoes, the world will end in
+        <span id="countdown">5</span> seconds!
+    </h1>
+    </div>
+</body>
+<script>
+    var countdown = document.getElementById("countdown");
+
+    var countItDown = function() {
+        var currentTIme = parseFloat(countdown.textContent)
+        if (currentTIme > 0) {
+            countdown.textContent = currentTIme - 1;
+        }
+        else {
+            window.clearInterval(timer);
+        }
+
+    };
+
+    var timer = window.setInterval(countItDown, 1000);
+</script>
+</html>
