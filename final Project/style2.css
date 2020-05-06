@@ -199,7 +199,7 @@ a#_bottom:hover {
     align-items: center;
     position: fixed;
     top: 50px;
-    right: 30px;
+    right: -30px;
 
 
     em {
