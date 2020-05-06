@@ -10,12 +10,12 @@ function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark"); //add this
-    document.getElementById("_Up").style.transition = "all 2s";
+    document.getElementById("_Up").style.transition = "all 0.5s";
     document.getElementById("set-dark").innerHTML = "dark mode";
   } else {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light"); //add this
-    document.getElementById("_Up").style.transition = "all 2s";
+    document.getElementById("_Up").style.transition = "all 0.5s";
     document.getElementById("set-dark").innerHTML = "light mode";
   }
 }
