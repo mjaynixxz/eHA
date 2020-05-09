@@ -127,7 +127,20 @@ p {
     display: grid;
     grid-template-columns: 200px 800px 200px;
     grid-template-rows: auto;
+    border-top: 1px solid lightslategray;
+    border-bottom: 1px solid lightslategray;
 
+}
+
+.file-d {
+    position: absolute;
+    top: 60px;
+    right: 290px;
+}
+
+.icon-1 {
+    margin-right: 20px;
+    color:var(--font-color);
 }
 
 p {
@@ -140,13 +153,12 @@ p {
 
 .grid-item {
     /* background-color: var(--bg-color); */
-    border-top: 1px solid lightslategray;
-    border-bottom: 1px solid lightslategray;
+    
     padding: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: center;
-    align-items: center;
+    /* border: 1px solid lightslategray; */
 
 }
 
@@ -160,14 +172,19 @@ p {
 .img-justify {
     display: flex;
     justify-content: start;
-    margin-left: 100px;
+    margin-left: 50px;
+    
+}
+
+.align-p {
+    margin-left: 50px;
 }
 
 .col-1-text {
     font-size: 1.5rem;
     font-weight: bolder;
     color: dodgerblue;
-
+    margin: 0px;
 }
 
 .col-2-bold {
