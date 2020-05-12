@@ -32,3 +32,16 @@ if (currentTheme) {
     toggleSwitch.checked = true;
   }
 }
+
+var x = document.getElementById("file-D");
+
+function displayHide() {
+  var xheight = window.scrollY;
+  if (xheight > 20) {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+addEventListener("scroll", displayHide);

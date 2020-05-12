@@ -16,6 +16,8 @@
 
 
 body {
+    background-image: url("../images/background.svg");
+    background-repeat: no-repeat;
     background-color: var(--bg-color);
     color: var(--font-color);
     font-size: 16px;
@@ -42,6 +44,11 @@ body {
 }
 
 /* animates top button and down button */
+
+a[href="#resume"]:hover {
+    animation: buttom 3s infinite;
+}
+
 a[href="#_bottom"]:hover {
     animation: buttom 1s infinite;
 }
@@ -100,6 +107,43 @@ p {
     margin: 5px;
 }
 
+#circle {
+    position: absolute;
+    top: 450px;
+    left: 150px;
+    width: 400px;
+    height: 400px;
+}
+
+#bottom1 {
+    position: absolute;
+    top: 500px;
+    right: 150px;
+    width: 200px;
+    height: 200px;
+}
+
+.bottom1 {
+    color: var(--font-color);
+    font-size: 2rem;
+    margin-left: 0;
+    padding: 0;
+}
+
+.fa-angle-double-down {
+    color: var(--font-color);
+    font-size: 8rem;
+    margin-left: 30px;
+}
+
+.head-container {
+    width: 70%;
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-bottom: 500px;
+    
+    
+}
 /* MAIN CSS FOR DIV */
 .container {
     display: flex;
@@ -134,8 +178,12 @@ p {
 
 .file-d {
     position: absolute;
-    top: 60px;
-    right: 290px;
+    top: 25px;
+    right: 200px;
+}
+
+.file-d span {
+    font-size: 3rem;
 }
 
 .icon-1 {
