@@ -16,7 +16,7 @@
 
 
 body {
-    background-image: url("../images/background.svg");
+    background-image: url("background.svg");
     background-repeat: no-repeat;
     background-color: var(--bg-color);
     color: var(--font-color);
